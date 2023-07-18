@@ -1,24 +1,24 @@
 @font-face {
   font-family: opensanshebrew;
-  src: url("/fonts/OpenSansHebrew-Light.ttf");
+  src: url("../fonts/OpenSansHebrew-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: opensanshebrew;
-  src: url("/fonts/OpenSansHebrew-Regular.ttf");
+  src: url("../fonts/OpenSansHebrew-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: opensanshebrew;
-  src: url("/fonts/OpenSansHebrew-Bold.ttf");
+  src: url("../fonts/OpenSansHebrew-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: opensanshebrew;
-  src: url("/fonts/OpenSansHebrew-ExtraBold.ttf");
+  src: url("../fonts/OpenSansHebrew-ExtraBold.ttf");
   font-weight: 900;
   font-style: normal;
 }
@@ -33,7 +33,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 45% 55%;
-  background-image: url("/img/main-bg.png");
+  background-image: url("../img/main-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/img/main-bg-wave.svg");
+  background-image: url("../img/main-bg-wave.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,12 +150,12 @@ body {
 }
 .laser-form::before {
   top: -2px;
-  background-image: url("/img/info-bg-wave-top.svg");
+  background-image: url("../img/info-bg-wave-top.svg");
   background-position: top;
 }
 .laser-form::after {
   bottom: -2px;
-  background-image: url("/img/info-bg-wave-top.svg");
+  background-image: url("../img/info-bg-wave-top.svg");
   transform: rotate(180deg);
 }
 .laser-form__title {
@@ -327,7 +327,7 @@ body {
   left: -2px;
   right: -2px;
   top: -2px;
-  background-image: url("/img/footer-bg-wave.svg");
+  background-image: url("../img/footer-bg-wave.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
