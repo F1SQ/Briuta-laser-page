@@ -1,0 +1,434 @@
+@font-face {
+  font-family: opensanshebrew;
+  src: url("/fonts/OpenSansHebrew-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: opensanshebrew;
+  src: url("/fonts/OpenSansHebrew-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: opensanshebrew;
+  src: url("/fonts/OpenSansHebrew-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: opensanshebrew;
+  src: url("/fonts/OpenSansHebrew-ExtraBold.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "opensanshebrew";
+}
+
+.major {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background-image: url("/img/main-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 70px 250px 70px;
+}
+.major::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/img/main-bg-wave.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.major-text {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1100px;
+}
+.major-logo {
+  width: 450px;
+  height: 150px;
+  margin: 0 0 50px 0;
+}
+.major-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.major-title {
+  direction: rtl;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1e2256;
+  text-align: center;
+  margin: 0;
+}
+
+.advantages {
+  color: #1e2256;
+  padding: 30px 0 40px 0;
+}
+.advantages-wrapper {
+  max-width: 1350px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+.advantages-title {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0 0 40px 0;
+}
+.advantages-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+  margin: 0 0 60px 0;
+}
+.advantages-point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 262px;
+  height: 258px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 6px #ccc;
+}
+.advantages-point:not(:last-child) {
+  margin: 0 0 0 38px;
+}
+.advantages-point_text {
+  font-size: 40px;
+  font-weight: 900;
+}
+.advantages-subtitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 60px 0;
+}
+.advantages-attraction {
+  font-size: 60px;
+  font-weight: 900;
+  color: #ff0000;
+}
+
+.laser-form {
+  position: relative;
+  background: rgb(8, 10, 28);
+  background: linear-gradient(352deg, rgb(8, 10, 28) 0%, rgb(10, 13, 64) 50%, rgb(9, 10, 114) 100%);
+  padding: 210px 0;
+  direction: rtl;
+  overflow: hidden;
+}
+.laser-form::before, .laser-form::after {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 50%;
+  right: -2px;
+  left: -2px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+.laser-form::before {
+  top: -2px;
+  background-image: url("/img/info-bg-wave-top.svg");
+  background-position: top;
+}
+.laser-form::after {
+  bottom: -2px;
+  background-image: url("/img/info-bg-wave-top.svg");
+  transform: rotate(180deg);
+}
+.laser-form__title {
+  position: relative;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  z-index: 1;
+  text-align: center;
+}
+.laser-form__wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.laser-form__input, .laser-form__button {
+  width: 400px;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 50px;
+}
+.laser-form__input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  height: 60px;
+  transform: scale(0.99);
+  transition: all 0.1s ease;
+}
+.laser-form__input:not(:last-child) {
+  margin: 0 0 0 35px;
+}
+.laser-form__input::placeholder {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+}
+.laser-form__input:focus {
+  transform: scale(1);
+}
+.laser-form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 50px;
+  font-weight: 700;
+  background-color: #fc0203;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.laser-form__button:active, .laser-form__button:focus {
+  border: none;
+  outline: none;
+}
+.laser-form__button:hover {
+  background-color: #b00102;
+  text-shadow: 0px 0px 10px;
+}
+
+.specification {
+  padding: 40px 80px;
+}
+.specification-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 100px;
+  margin: 0 0 130px 0;
+}
+.specification-block__text {
+  direction: rtl;
+  max-width: 1100px;
+}
+.specification-block__text-title {
+  color: #1e2256;
+  font-size: 47px;
+  font-weight: 700;
+  padding: 0 0 40px 0;
+  border-bottom: 7px solid #ff0000;
+}
+.specification-block__text-desc {
+  color: #000;
+  font-size: 37px;
+  font-weight: 400;
+}
+.specification-block__image {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.specification-block__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.specification-block__list {
+  padding: 35px 0 0 0;
+  margin: 0;
+  list-style: none;
+}
+.specification-block__list li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.specification-block__list-text {
+  margin: 0;
+  padding: 0 15px 0 0;
+  color: #000;
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 125%;
+}
+.specification-block__list-dot {
+  margin: 22px 0 0 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.specification-info {
+  direction: rtl;
+  color: #1e2256;
+  text-align: center;
+}
+.specification-info__text {
+  font-size: 46px;
+  font-weight: 900;
+  margin: 0 0 120px 0;
+}
+.specification-info__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff0000;
+  border-radius: 100px;
+  color: #fff;
+  width: 80%;
+  min-height: 160px;
+  margin: 0 auto;
+  font-size: 68px;
+  font-weight: 900;
+}
+
+.laser-footer {
+  position: relative;
+  padding: 200px 110px 90px 110px;
+  background: rgb(9, 13, 56);
+  background: linear-gradient(304deg, rgb(9, 13, 56) 0%, rgb(10, 12, 103) 55%, rgb(9, 9, 121) 100%);
+  overflow: hidden;
+}
+.laser-footer::before {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 150px;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  background-image: url("/img/footer-bg-wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.laser-footer__wrapper {
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.laser-footer__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 30px;
+}
+.laser-footer__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.laser-footer__text span {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0 0 0 40px;
+}
+.laser-footer__text span:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  transform: translateX(-50%);
+}
+.laser-footer__number {
+  margin: 0 0 0 20px;
+}
+.laser-footer__number a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  position: relative;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.laser-footer__number a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.laser-footer__number a:hover {
+  text-shadow: 0px 0px 3px #fff;
+}
+.laser-footer__number a:hover::before {
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+.laser-footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.laser-footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.laser-footer__social a:not(:last-child) {
+  margin: 0 20px 0 0;
+}
+.laser-footer__social a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  transform: scale(1);
+}
+.laser-footer__social a img:hover {
+  box-shadow: 0px 0px 10px #fff;
+  transform: scale(1.05);
+}/*# sourceMappingURL=style.css.map */
