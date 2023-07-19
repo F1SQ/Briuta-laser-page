@@ -22,11 +22,25 @@
   font-weight: 900;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "opensanshebrew";
+}
+
+.header__logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 48px;
+  z-index: 99;
 }
 
 .major {
@@ -38,6 +52,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 70px 250px 70px;
+  overflow: hidden;
 }
 .major::after {
   content: "";
@@ -46,7 +61,7 @@ body {
   height: 100px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   background-image: url("../img/main-bg-wave.svg");
   background-position: center;
   background-size: cover;
@@ -82,7 +97,7 @@ body {
 
 .advantages {
   color: #1e2256;
-  padding: 30px 0 40px 0;
+  padding: 50px 30px 40px 30px;
 }
 .advantages-wrapper {
   max-width: 1350px;
@@ -94,6 +109,7 @@ body {
   font-size: 38px;
   font-weight: 900;
   margin: 0 0 40px 0;
+  direction: rtl;
 }
 .advantages-block {
   display: flex;
@@ -114,7 +130,7 @@ body {
 .advantages-point:not(:last-child) {
   margin: 0 0 0 38px;
 }
-.advantages-point_text {
+.advantages-point__text {
   font-size: 40px;
   font-weight: 900;
 }
@@ -122,6 +138,7 @@ body {
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 60px 0;
+  direction: rtl;
 }
 .advantages-attraction {
   font-size: 60px;
@@ -131,9 +148,14 @@ body {
 
 .laser-form {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: rgb(8, 10, 28);
   background: linear-gradient(352deg, rgb(8, 10, 28) 0%, rgb(10, 13, 64) 50%, rgb(9, 10, 114) 100%);
-  padding: 210px 0;
+  padding: 50px 30px;
+  min-height: 500px;
   direction: rtl;
   overflow: hidden;
 }
@@ -173,6 +195,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 .laser-form__input, .laser-form__button {
   width: 400px;
@@ -186,7 +210,7 @@ body {
   color: #fff;
   font-size: 30px;
   font-weight: 400;
-  height: 60px;
+  height: 80px;
   transform: scale(0.99);
   transition: all 0.1s ease;
 }
@@ -200,6 +224,9 @@ body {
 }
 .laser-form__input:focus {
   transform: scale(1);
+}
+.laser-form__input:focus-visible {
+  outline: none;
 }
 .laser-form__button {
   display: flex;
@@ -262,7 +289,7 @@ body {
   object-fit: cover;
 }
 .specification-block__list {
-  padding: 35px 0 0 0;
+  padding: 15px 0 0 0;
   margin: 0;
   list-style: none;
 }
@@ -270,6 +297,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+}
+.specification-block__list li:not(:last-child) {
+  margin: 0 0 25px 0;
 }
 .specification-block__list-text {
   margin: 0;
@@ -310,6 +340,10 @@ body {
   margin: 0 auto;
   font-size: 68px;
   font-weight: 900;
+  padding: 10px 15px;
+}
+.specification-info__banner br {
+  display: none;
 }
 
 .laser-footer {
@@ -369,10 +403,13 @@ body {
   left: -20px;
   transform: translateX(-50%);
 }
-.laser-footer__number {
+.laser-footer__phone {
   margin: 0 0 0 20px;
 }
-.laser-footer__number a {
+.laser-footer__phone a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 35px;
   font-weight: 700;
@@ -383,7 +420,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.laser-footer__number a::before {
+.laser-footer__phone a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -394,10 +431,10 @@ body {
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-.laser-footer__number a:hover {
+.laser-footer__phone a:hover {
   text-shadow: 0px 0px 3px #fff;
 }
-.laser-footer__number a:hover::before {
+.laser-footer__phone a:hover::before {
   transform: scale(1);
   transform-origin: bottom left;
 }
@@ -431,4 +468,453 @@ body {
 .laser-footer__social a img:hover {
   box-shadow: 0px 0px 10px #fff;
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 1440px) {
+  .major-title {
+    font-size: 31px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__logo img {
+    width: 300px;
+    height: 120px;
+  }
+  .major {
+    padding: 30px 50px 70px 50px;
+    min-height: 500px;
+    background-position: left;
+    grid-template-columns: 1fr;
+  }
+  .major::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #2e2e2e;
+    opacity: 0.4;
+  }
+  .major::after {
+    background-image: url("../img/main-bg-wave-mobile.svg");
+    background-position: top;
+    max-height: 100px;
+  }
+  .major-text {
+    position: relative;
+    grid-column: 1/2;
+  }
+  .major-logo {
+    display: none;
+  }
+  .major-title {
+    font-size: 34px;
+    line-height: 160%;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    max-width: 85%;
+  }
+  .advantages-title {
+    font-size: 35px;
+  }
+  .advantages-point {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 1px 10px #ccc;
+  }
+  .advantages-point__text {
+    font-size: 32px;
+  }
+  .advantages-subtitle {
+    font-size: 31px;
+    max-width: 85%;
+    margin: 0 auto 30px;
+  }
+  .advantages-attraction {
+    font-size: 50px;
+  }
+  .laser-form {
+    padding: 100px 30px;
+  }
+  .laser-form__title {
+    font-size: 45px;
+  }
+  .laser-form__wrapper {
+    width: 80%;
+    flex-direction: column;
+  }
+  .laser-form__input:not(:last-child) {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  .laser-form__input:last-child {
+    background-color: #fff;
+    color: #000;
+  }
+  .laser-form__button {
+    width: 100%;
+  }
+  .specification-block {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px 0;
+  }
+  .specification-block:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .specification-block__image {
+    width: 380px;
+    height: 380px;
+  }
+  .specification-block__text-title {
+    font-size: 37px;
+    padding: 0 0 30px 0;
+    border-bottom: 5px solid #ff0000;
+  }
+  .specification-block__text-desc {
+    font-size: 36px;
+    line-height: 125%;
+  }
+  .specification-info__text {
+    font-size: 38px;
+    margin: 0 0 70px 0;
+  }
+  .specification-info__text br {
+    display: none;
+  }
+  .specification-info__banner {
+    width: 100%;
+    font-size: 50px;
+    text-shadow: 0px 0px 3px #fff;
+  }
+  .specification-info__banner br {
+    display: block;
+  }
+  .laser-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 50px 30px 50px 30px;
+    min-height: 330px;
+  }
+  .laser-footer::before {
+    background-image: url("../img/footer-bg-wave-mobile.svg");
+    background-position: bottom;
+    height: 60px;
+  }
+  .laser-footer__wrapper {
+    flex-direction: column;
+  }
+  .laser-footer__info {
+    margin: 0 0 35px 0;
+  }
+  .laser-footer__text span {
+    font-size: 30px;
+  }
+  .laser-footer__phone a {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .major {
+    padding: 30px 50px 90px 50px;
+  }
+  .major-title {
+    font-size: 32px;
+  }
+  .major-title br {
+    display: none;
+  }
+  .advantages {
+    padding: 40px 30px;
+  }
+  .advantages-title {
+    font-size: 30px;
+  }
+  .advantages-point {
+    width: 170px;
+    height: 165px;
+  }
+  .advantages-point__text {
+    font-size: 28px;
+    line-height: 110%;
+  }
+  .advantages-subtitle {
+    font-size: 28px;
+    line-height: 120%;
+  }
+  .advantages-attraction {
+    font-size: 45px;
+  }
+  .laser-form__title {
+    font-size: 40px;
+    margin: 0 0 40px 0;
+  }
+  .laser-form__input {
+    height: 70px;
+    font-size: 26px;
+  }
+  .laser-form__input::placeholder {
+    font-size: 25px;
+  }
+  .specification-block__image {
+    width: 320px;
+    height: 320px;
+  }
+  .specification-block__text-title {
+    font-size: 30px;
+  }
+  .specification-block__text-desc {
+    font-size: 28px;
+  }
+  .specification-block__list-text {
+    font-size: 28px;
+    padding: 0 10px 0 0;
+  }
+  .specification-info__text {
+    font-size: 34px;
+    margin: 0 0 50px 0;
+  }
+  .specification-info__banner {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .laser-footer {
+    min-height: 290px;
+  }
+  .laser-footer__info {
+    margin: 0 0 30px 0;
+  }
+  .laser-footer__text span {
+    font-size: 21px;
+    margin: 0 0 0 30px;
+  }
+  .laser-footer__text span::after {
+    left: -15px;
+    width: 2px;
+  }
+  .laser-footer__phone {
+    margin: 0;
+  }
+  .laser-footer__phone a {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .major {
+    padding: 35px 10px;
+    background-image: url("../img/main-bg_mobile.png");
+    min-height: 350px;
+  }
+  .major::after {
+    max-height: 40px;
+  }
+  .major-text {
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+  .major-title {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .advantages-title {
+    font-size: 20px;
+    margin: 0 0 30px 0;
+  }
+  .advantages-point {
+    width: 120px;
+    height: 115px;
+    overflow: hidden;
+    padding: 15px;
+  }
+  .advantages-point:not(:last-child) {
+    margin: 0 0 0 12px;
+  }
+  .advantages-point__text {
+    font-size: 22px;
+  }
+  .advantages-block {
+    margin: 0 0 40px 0;
+  }
+  .advantages-subtitle {
+    font-size: 17px;
+  }
+  .advantages-attraction {
+    font-size: 34px;
+  }
+  .laser-form {
+    padding: 70px 20px;
+    min-height: 400px;
+  }
+  .laser-form:before, .laser-form:after {
+    height: 50px;
+  }
+  .laser-form__title {
+    font-size: 25px;
+  }
+  .laser-form__wrapper {
+    width: 90%;
+  }
+  .laser-form__input {
+    padding: 8px 20px 8px 15px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 18px;
+  }
+  .laser-form__input::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .laser-form__input:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+  .laser-form__button {
+    border-radius: 16px;
+    height: 40px;
+    font-size: 24px;
+  }
+  .specification {
+    padding: 30px 20px;
+  }
+  .specification-block {
+    margin: 0 0 30px 0;
+  }
+  .specification-block__image {
+    width: 220px;
+    height: 220px;
+  }
+  .specification-block__text-title {
+    font-size: 19px;
+    padding: 0 0 15px 0;
+    border-bottom: 3px solid #ff0000;
+  }
+  .specification-block__text-desc {
+    font-size: 18px;
+  }
+  .specification-block__list-dot {
+    margin: 8px 0 0 0;
+    width: 5px;
+    height: 5px;
+  }
+  .specification-block__list-text {
+    font-size: 19px;
+  }
+  .specification-info__text {
+    font-size: 19px;
+  }
+  .specification-info__banner {
+    font-size: 25px;
+    min-height: 70px;
+  }
+  .laser-footer {
+    padding: 60px 30px 30px 30px;
+    min-height: 180px;
+  }
+  .laser-footer:before {
+    height: 40px;
+  }
+  .laser-footer__info {
+    margin: 0 0 20px 0;
+  }
+  .laser-footer__text span {
+    font-size: 12px;
+    margin: 0 0 0 20px;
+    line-height: normal;
+  }
+  .laser-footer__text span:after {
+    left: -10px;
+  }
+  .laser-footer__phone a {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .laser-footer__social a {
+    width: 25px;
+    height: 25px;
+  }
+  .laser-footer__social a:not(:last-child) {
+    margin: 0 10px 0 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__logo {
+    margin: 0 0 10px 0;
+  }
+  .header__logo img {
+    width: 250px;
+    height: 90px;
+  }
+  .major {
+    min-height: 310px;
+  }
+  .major-title {
+    font-size: 18px;
+  }
+  .advantages {
+    padding: 30px 20px;
+  }
+  .advantages-title {
+    font-size: 15px;
+    margin: 0 0 20px 0;
+  }
+  .advantages-point {
+    width: 80px;
+    height: 75px;
+  }
+  .advantages-point__text {
+    font-size: 14px;
+  }
+  .advantages-block {
+    margin: 0 0 30px 0;
+  }
+  .advantages-subtitle {
+    width: 100%;
+    font-size: 13px;
+    margin: 0 auto 20px;
+  }
+  .advantages-attraction {
+    font-size: 24px;
+  }
+  .laser-form__title {
+    font-size: 18px;
+    margin: 0 0 25px 0;
+  }
+  .laser-form__wrapper {
+    width: 100%;
+  }
+  .specification-block__text-title {
+    font-size: 13px;
+    border-bottom: 2px solid #ff0000;
+  }
+  .specification-block__text-desc {
+    font-size: 13px;
+  }
+  .specification-block__list-text {
+    font-size: 13px;
+  }
+  .specification-info__text {
+    font-size: 14px;
+    margin: 0 0 30px 0;
+  }
+  .specification-info__banner {
+    font-size: 17px;
+    min-height: 65px;
+  }
+  .laser-footer {
+    padding: 50px 10px 25px 10px;
+    min-height: 170px;
+  }
+  .laser-footer__text span {
+    font-size: 10px;
+    margin: 0 0 0 10px;
+  }
+  .laser-footer__text span::after {
+    left: -5px;
+  }
+  .laser-footer__phone a {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
