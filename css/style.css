@@ -335,6 +335,8 @@ body {
   flex-direction: column;
   background-color: #ff0000;
   border-radius: 100px;
+  text-decoration: none;
+  color: inherit;
   color: #fff;
   width: 80%;
   min-height: 160px;
@@ -342,7 +344,6 @@ body {
   font-size: 68px;
   font-weight: 900;
   padding: 10px 15px;
-  pointer-events: none;
 }
 .specification-info__banner br {
   display: none;
