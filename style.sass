@@ -71,8 +71,8 @@ body
     flex-direction: column
     max-width: 1100px
   &-logo
-    width: 450px
-    height: 150px
+    width: 390px
+    height: 130px
     margin: 0 0 50px 0
     img
       display: block
@@ -89,7 +89,7 @@ body
 
 .advantages
   color: #1e2256
-  padding: 50px 30px 40px 30px
+  padding: 40px 30px
   &-wrapper
     max-width: 1350px
     margin: 0 auto
@@ -97,7 +97,7 @@ body
     text-align: center
     direction: rtl
   &-title
-    font-size: 38px
+    font-size: 34px
     font-weight: 900
     margin: 0 0 40px 0
     direction: rtl
@@ -106,28 +106,28 @@ body
     align-items: center
     justify-content: center
     direction: rtl
-    margin: 0 0 60px 0
+    margin: 0 0 40px 0
   &-point
     display: flex
     align-items: center
     justify-content: center
-    width: 262px
-    height: 258px
+    width: 232px
+    height: 227px
     border-radius: 50%
     box-shadow: 0px 1px 6px #ccc
     &:not(:last-child)
-      margin: 0 0 0 38px
+      margin: 0 0 0 50px
     &__text
-      font-size: 40px
+      font-size: 30px
       font-weight: 900
 
   &-subtitle
-    font-size: 36px
+    font-size: 26px
     font-weight: 700
-    margin: 0 0 60px 0
+    margin: 0 0 40px 0
     direction: rtl
   &-attraction
-    font-size: 60px
+    font-size: 34px
     font-weight: 900
     color: #ff0000
 
@@ -140,7 +140,7 @@ body
   background: rgb(8,10,28)
   background: linear-gradient(352deg, rgba(8,10,28,1) 0%, rgba(10,13,64,1) 50%, rgba(9,10,114,1) 100%)
   padding: 50px 30px
-  min-height: 500px
+  min-height: 540px
   direction: rtl
   overflow: hidden
   &::before, &::after
@@ -166,40 +166,41 @@ body
   &__title
     position: relative
     color: #fff
-    font-size: 70px
+    font-size: 40px
     font-weight: 700
     margin: 0 0 50px 0
     z-index: 1
     text-align: center
-
   &__wrapper
     position: relative
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    // display: flex
+    // align-items: center
+    // justify-content: center
+    // flex-wrap: wrap
+    gap: 25px
     z-index: 1
-    display: flex
-    align-items: center
-    justify-content: center
-    flex-wrap: wrap
-    row-gap: 20px
   &__input, &__button
-    width: 400px
+    // width: 350px
+    width: 100%
     padding: 10px 20px
     color: #fff
     border-radius: 50px
-
+    height: 70px
   &__input
     background-color: transparent
     border: 1px solid #fff
     color: #fff
-    font-size: 30px
+    font-size: 26px
     font-weight: 400
-    height: 80px
     transform: scale(0.99)
     transition: all 0.1s ease
-    &:not(:last-child)
-      margin: 0 0 0 35px
+    // &:not(:last-child)
+    //   margin: 0 0 0 35px
     &::placeholder
       color: #fff
-      font-size: 30px
+      font-size: 25px
       font-weight: 400
     &:focus
       transform: scale(1)
@@ -210,8 +211,7 @@ body
     display: flex
     align-items: center
     justify-content: center
-    height: 80px
-    font-size: 50px
+    font-size: 35px
     font-weight: 700
     background-color: #fc0203
     border: none
@@ -228,29 +228,35 @@ body
   padding: 40px 80px
   &-block
     display: flex
-    align-items: flex-start
+    align-items: center
     justify-content: center
-    column-gap: 100px
-    margin: 0 0 130px 0
+    column-gap: 50px
+    padding: 0 70px
+    &:not(:nth-last-child(-n+2))
+      margin: 0 0 50px 0
+    &:nth-last-child(2)
+      margin: 0 0 70px 0
     &__text
       direction: rtl
-      max-width: 1100px
+      max-width: 1000px
+      flex: 1 1 65%
 
     &__text-title
       color: #1e2256
-      font-size: 47px
+      font-size: 30px
       font-weight: 700
-      padding: 0 0 40px 0
-      border-bottom: 7px solid #ff0000
+      padding: 0 0 30px 0
+      border-bottom: 3px solid #ff0000
     &__text-desc
       color: #000
-      font-size: 37px
+      font-size: 23px
       font-weight: 400
     &__image
-      width: 500px
-      height: 500px
+      max-width: 440px
+      max-height: 440px
       border-radius: 50px
       overflow: hidden
+      flex: 1 0 35%
       img
         display: block
         width: 100%
@@ -271,11 +277,11 @@ body
         padding: 0 15px 0 0
         // position: relative
         color: #000
-        font-size: 37px
+        font-size: 23px
         font-weight: 400
         line-height: 125%
       &-dot
-        margin: 22px 0 0 0
+        margin: 11px 0 0 0
         width: 7px
         height: 7px
         border-radius: 50%
@@ -291,9 +297,9 @@ body
     color: #1e2256
     text-align: center
     &__text
-      font-size: 46px
+      font-size: 30px
       font-weight: 900
-      margin: 0 0 120px 0
+      margin: 0 0 50px 0
     &__banner
       display: flex
       align-items: center
@@ -303,12 +309,12 @@ body
       border-radius: 100px
       text-decoration: none
       color: #fff
-      width: 80%
-      min-height: 160px
+      width: 60%
+      min-height: 120px
       margin: 0 auto
-      font-size: 68px
+      font-size: 38px
       font-weight: 900
-      padding: 10px 15px
+      padding: 15px 20px
       cursor: inherit
       pointer-events: none
       br
@@ -324,7 +330,7 @@ body
     content: ''
     position: absolute
     width: 101%
-    height: 150px
+    height: 120px
     left: -2px
     right: -2px
     top: -2px
@@ -353,7 +359,7 @@ body
       position: relative
       display: block
       color: #fff
-      font-size: 35px
+      font-size: 30px
       font-weight: 700
       line-height: 120%
       margin: 0 0 0 40px
@@ -371,16 +377,13 @@ body
   &__phone
     margin: 0 0 0 20px
     a
+      position: relative
       display: flex
       align-items: center
       justify-content: center
-      color: #fff
-      font-size: 35px
+      font-size: 30px
       font-weight: 700
-      position: relative
       color: #fff
-      font-size: 35px
-      font-weight: 700
       text-decoration: none
       transition: all 0.3s ease
       &::before
@@ -429,8 +432,59 @@ body
 
 @media screen and ( max-width: 1440px )
   .major
+    grid-template-columns: 40% 60%
+    padding: 50px 70px 150px 70px
     &-title
-      font-size: 31px
+      font-size: 28px
+    &-logo
+      width: 360px
+      height: 120px
+
+  .advantages
+    &-point
+      width: 202px
+      height: 197px
+
+  .specification
+    &-info
+      &__banner
+        width: 60%
+        min-height: 90px
+        font-size: 26px
+
+  .laser-form
+    min-height: 380px
+    padding: 100px 30px
+    &__title
+      font-size: 34px
+      margin: 0 0 30px 0
+    &__wrapper
+      // width: 80%
+      // flex-direction: column
+      gap: 15px
+    &__input, &__button
+      height: 50px
+      font-size: 19px
+      font-weight: 400
+    &__input
+      &:last-child
+        background-color: #fff
+        color: #000
+      &::placeholder
+        font-size: 19px
+        font-weight: 400
+
+  .laser-footer
+    &__text
+      span
+        font-size: 20px
+    &__phone
+      a
+        font-size: 20px
+    &__social
+      a
+        width: 40px
+        height: 40px
 
 @media screen and ( max-width: 1200px )
   .header__logo
@@ -472,40 +526,26 @@ body
       color: #fff
       text-shadow: 1px 1px 3px #000
       max-width: 85%
+
   .advantages
     &-title
-      font-size: 35px
+      font-size: 30px
+      margin: 0 0 35px 0
     &-point
-      width: 200px
-      height: 200px
-      box-shadow: 0px 1px 10px #ccc
+      width: 180px
+      height: 175px
+      box-shadow: 0px 3px 12px #a0a0a0
+      &:not(:last-child)
+        margin: 0 0 0 40px
       &__text
-        font-size: 32px
+        font-size: 26px
     &-subtitle
-      font-size: 31px
+      font-size: 24px
       max-width: 85%
       margin: 0 auto 30px
     &-attraction
-      font-size: 50px
+      font-size: 40px
       direction: rtl
-
-  .laser-form
-    padding: 100px 30px
-    &__title
-      font-size: 45px
-    &__wrapper
-      width: 80%
-      flex-direction: column
-    &__input
-      &:not(:last-child)
-        margin: 0 0 20px 0
-        width: 100%
-    &__input
-      &:last-child
-        background-color: #fff
-        color: #000
-    &__button
-      width: 100%
 
   .specification
     &-block
@@ -519,22 +559,22 @@ body
         height: 380px
       &__text
         &-title
-          font-size: 37px
-          padding: 0 0 30px 0
-          border-bottom: 5px solid #ff0000
+          // font-size: 37px
+          // padding: 0 0 30px 0
+          // border-bottom: 5px solid #ff0000
         &-desc
-          font-size: 36px
+          // font-size: 36px
           line-height: 125%
     &-info
       &__text
-        font-size: 38px
-        margin: 0 0 70px 0
+        // font-size: 38px
+        // margin: 0 0 70px 0
         br
           display: none
       &__banner
-        width: 100%
-        font-size: 50px
-        text-shadow: 0px 0px 3px #fff
+        // width: 100%
+        // font-size: 50px
+        // text-shadow: 0px 0px 3px #fff
         br
           display: block
 
@@ -554,10 +594,10 @@ body
       margin: 0 0 35px 0
     &__text
       span
-        font-size: 30px
+        // font-size: 30px
     &__phone
       a
-        font-size: 30px
+        // font-size: 30px
 
 @media screen and ( max-width: 992px )
 
@@ -571,49 +611,71 @@ body
   .advantages
     padding: 40px 30px
     &-title
-      font-size: 30px
+      // font-size: 30px
     &-point
       width: 170px
       height: 165px
       &__text
-        font-size: 28px
+        // font-size: 28px
         line-height: 110%
     &-subtitle
       font-size: 28px
       line-height: 120%
     &-attraction
-      font-size: 45px
+      // font-size: 45px
 
   .laser-form
     &__title
-      font-size: 40px
+      // font-size: 40px
       margin: 0 0 40px 0
-    &__input
-      height: 70px
-      font-size: 26px
+    &__wrapper
+      width: 100%
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(4, 1fr)
+      justify-items: center
+      margin: 0 auto
+      gap: 25px
+    &__input, &__button
+      width: 90%
+      // height: 70px
+      // font-size: 26px
       &::placeholder
-        font-size: 25px
+        // font-size: 25px
+    &__button
+      font-size: 22px
+      font-weight: 700
 
   .specification
     &-block
+      width: calc( 100% - 20px)
+      padding: 0
+      &:not(:nth-last-child(-n+2))
+        margin: 0 auto 35px
+
+      &:nth-last-child(2)
+        margin: 0 auto 45px
       &__image
         width: 320px
         height: 320px
       &__text
         &-title
-          font-size: 30px
+
         &-desc
-          font-size: 28px
+          margin: 0 0 10px 0
       &__list
+        padding: 0
+        li:not(:last-child)
+          margin: 0 0 15px 0
         &-text
-          font-size: 28px
           padding: 0 10px 0 0
+          br
+            display: none
     &-info
       &__text
-        font-size: 34px
+        // font-size: 34px
         margin: 0 0 50px 0
       &__banner
-        font-size: 40px
+        // font-size: 40px
         line-height: 120%
 
   .laser-footer
@@ -622,7 +684,7 @@ body
       margin: 0 0 30px 0
     &__text
       span
-        font-size: 21px
+        // font-size: 21px
         margin: 0 0 0 30px
         &::after
           left: -15px
@@ -630,7 +692,7 @@ body
     &__phone
       margin: 0
       a
-        font-size: 21px
+        // font-size: 21px
 
 @media screen and ( max-width: 576px )
 
@@ -750,9 +812,28 @@ body
 @media screen and ( max-width: 425px )
   .advantages
     &-title
-      font-size: 17px
+      font-size: 18px
     &-subtitle
       font-size: 16px
+    &-point
+      width: 100px
+      height: 95px
+      &__text
+        font-size: 17px
+    &-attraction
+      font-size: 21px
+
+  .laser-form
+    &__wrapper
+      gap: 15px
+    &__input, &__button
+      width: 100%
+
+  .specification
+    &-info
+      &__banner
+        width: 95%
+        font-size: 20px
 
   .laser-footer
     padding: 50px 10px 25px 10px
