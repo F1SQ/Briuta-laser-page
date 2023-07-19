@@ -342,6 +342,7 @@ body {
   font-size: 68px;
   font-weight: 900;
   padding: 10px 15px;
+  pointer-events: none;
 }
 .specification-info__banner br {
   display: none;
@@ -854,6 +855,20 @@ body {
   .advantages-subtitle {
     font-size: 16px;
   }
+  .laser-footer {
+    padding: 50px 10px 25px 10px;
+    min-height: 170px;
+  }
+  .laser-footer__text span {
+    font-size: 10px;
+    margin: 0 0 0 10px;
+  }
+  .laser-footer__text span::after {
+    left: -5px;
+  }
+  .laser-footer__phone a {
+    font-size: 10px;
+  }
 }
 @media screen and (max-width: 375px) {
   .header__logo {
@@ -918,19 +933,5 @@ body {
   .specification-info__banner {
     font-size: 17px;
     min-height: 65px;
-  }
-  .laser-footer {
-    padding: 50px 10px 25px 10px;
-    min-height: 170px;
-  }
-  .laser-footer__text span {
-    font-size: 10px;
-    margin: 0 0 0 10px;
-  }
-  .laser-footer__text span::after {
-    left: -5px;
-  }
-  .laser-footer__phone a {
-    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
