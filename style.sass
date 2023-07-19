@@ -304,6 +304,7 @@ body
       font-size: 68px
       font-weight: 900
       padding: 10px 15px
+      pointer-events: none
       br
         display: none
 
@@ -746,6 +747,20 @@ body
     &-subtitle
       font-size: 16px
 
+  .laser-footer
+    padding: 50px 10px 25px 10px
+    min-height: 170px
+
+    &__text
+      span
+        font-size: 10px
+        margin: 0 0 0 10px
+        &::after
+          left: -5px
+    &__phone
+      a
+        font-size: 10px
+
 @media screen and ( max-width: 375px )
   .header
     &__logo
@@ -803,17 +818,3 @@ body
       &__banner
         font-size: 17px
         min-height: 65px
-
-  .laser-footer
-    padding: 50px 10px 25px 10px
-    min-height: 170px
-
-    &__text
-      span
-        font-size: 10px
-        margin: 0 0 0 10px
-        &::after
-          left: -5px
-    &__phone
-      a
-        font-size: 10px
