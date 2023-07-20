@@ -38,18 +38,26 @@ body
     height: 100px
     margin: 0 auto 48px
     z-index: 99
-    img
-      width: 300px
+    picture
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 240px
+      height: 100px
+      padding: 40px 0 0 0
+      img
+        width: 100%
+        height: auto
 
 .major
   position: relative
   display: grid
-  grid-template-columns: 45% 55%
+  grid-template-columns: 45% 45%
   background-image: url('../img/main-bg.png')
-  background-position: center
+  background-position: left bottom
   background-size: cover
   background-repeat: no-repeat
-  padding: 80px 70px 250px 70px
+  padding: 70px 50px 240px 50px
   overflow: hidden
   &::after
     content: ''
@@ -71,8 +79,8 @@ body
     flex-direction: column
     max-width: 1100px
   &-logo
-    width: 390px
-    height: 130px
+    width: 310px
+    height: 110px
     margin: 0 0 50px 0
     img
       display: block
@@ -81,7 +89,7 @@ body
       object-fit: cover
   &-title
     direction: rtl
-    font-size: 36px
+    font-size: 32px
     font-weight: 400
     color: #1e2256
     text-align: center
@@ -430,12 +438,16 @@ body
           box-shadow: 0px 0px 10px #fff
           transform: scale(1.05)
 
+@media screen and ( max-width: 1700px )
+  .major
+    &-title
+      font-size: 27px
 @media screen and ( max-width: 1440px )
   .major
     grid-template-columns: 40% 60%
     padding: 50px 70px 150px 70px
     &-title
-      font-size: 28px
+      font-size: 26px
     &-logo
       width: 360px
       height: 120px
